@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 360px;
+    background-color: #f4f6fa;
+    color: #333;
+    padding: 14px;
+}
+
+.header {
+    margin-bottom: 12px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.zalo-badge {
+    background-color: #0068ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.platform-selector {
+    display: flex;
+    gap: 8px;
+}
+
+.radio-label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.platform-btn {
+    display: block;
+    text-align: center;
+    padding: 7px 0;
+    border-radius: 6px;
+    border: 1px solid #dcdfe6;
+    background: #fff;
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.radio-label input[type="radio"]:checked + .zalo-btn {
+    border-color: #0068ff;
+    background: #e8f1ff;
+    color: #0068ff;
+}
+
+.radio-label input[type="radio"]:checked + .messenger-btn {
+    border-color: #0084ff;
+    background: #e5f2ff;
+    color: #0084ff;
+}
+
+h2 {
+    font-size: 16px;
+    color: #111;
+}
+
+.subtitle {
+    font-size: 11px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 12px;
+    color: #444;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 13px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+textarea:focus, input[type="datetime-local"]:focus {
+    border-color: #0068ff;
+}
+
+input[type="datetime-local"] {
+    width: 100%;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    padding: 7px 8px;
+    font-size: 13px;
+    outline: none;
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-quick {
+    flex: 1;
+    background: #edf3fc;
+    color: #0068ff;
+    border: 1px solid #cce0ff;
+    border-radius: 4px;
+    padding: 5px 0;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-quick:hover {
+    background: #0068ff;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #0068ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0054d1;
+}
+
+.tip-box {
+    font-size: 11px;
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 7px;
+    border-radius: 4px;
+    border-left: 3px solid #0068ff;
+}
+
+.tip-box a {
+    color: #0068ff;
+    text-decoration: none;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0 8px 0;
+}
+
+.section-title h3 {
+    font-size: 13px;
+    color: #333;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.btn-text:hover {
+    color: #e02424;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.task-item {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    border-left: 3px solid #ccc;
+    font-size: 12px;
+    position: relative;
+}
+
+.task-item.status-pending {
+    border-left-color: #ff9800;
+}
+
+.task-item.status-sent {
+    border-left-color: #4caf50;
+}
+
+.task-item.status-failed {
+    border-left-color: #f44336;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.task-time {
+    font-weight: 600;
+    color: #222;
+}
+
+.task-status {
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.badge-pending { background: #fff3e0; color: #e65100; }
+.badge-sent { background: #e8f5e9; color: #2e7d32; }
+.badge-failed { background: #ffebee; color: #c62828; }
+
+.task-platform {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.platform-tag-zalo {
+    background: #e1eeff;
+    color: #0068ff;
+}
+
+.platform-tag-messenger {
+    background: #e5f2ff;
+    color: #0084ff;
+}
+
+.task-body {
+    color: #555;
+    word-break: break-word;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    color: #f44336;
+}
+
+.empty-state {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    padding: 20px 0;
+}
+

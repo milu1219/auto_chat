@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalo Auto Message Scheduler</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-title">
+            <span class="zalo-badge">Auto</span>
+            <h2>Hẹn Giờ Tin Nhắn</h2>
+        </div>
+        <p class="subtitle">Tự động gửi tin nhắn theo lịch hẹn trên Zalo & Messenger</p>
+    </div>
+
+    <div class="card">
+        <label><strong>Nền tảng gửi:</strong></label>
+        <div class="platform-selector">
+            <label class="radio-label">
+                <input type="radio" name="platform" value="zalo" checked>
+                <span class="platform-btn zalo-btn">Zalo Web</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="platform" value="messenger">
+                <span class="platform-btn messenger-btn">Messenger</span>
+            </label>
+        </div>
+
+        <label for="messageInput"><strong>Nội dung tin nhắn:</strong></label>
+        <textarea id="messageInput" placeholder="Nhập nội dung bạn muốn gửi..." rows="4"></textarea>
+
+        <label for="scheduleTime"><strong>Thời gian gửi:</strong></label>
+        <input type="datetime-local" id="scheduleTime">
+
+        <div class="quick-buttons">
+            <button type="button" class="btn-quick" data-minutes="5">+5 phút</button>
+            <button type="button" class="btn-quick" data-minutes="15">+15 phút</button>
+            <button type="button" class="btn-quick" data-minutes="60">+1 giờ</button>
+        </div>
+
+        <button id="btnSchedule" class="btn-primary">
+            <span>⏰</span> Lên Lịch Gửi
+        </button>
+
+        <div class="tip-box" id="tipBox">
+            💡 <strong>Mẹo:</strong> Hãy mở sẵn cuộc trò chuyện bạn muốn gửi trên <a href="https://chat.zalo.me" target="_blank" id="platformLink">chat.zalo.me</a> trước thời điểm hẹn.
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h3>Danh Sách Lịch Hẹn</h3>
+        <button id="btnClearAll" class="btn-text">Xóa lịch sử</button>
+    </div>
+
+    <div id="taskList" class="task-list">
+        <!-- Danh sách nhiệm vụ sẽ render tại đây -->
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
